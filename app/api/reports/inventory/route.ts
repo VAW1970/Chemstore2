@@ -4,6 +4,9 @@ import jsPDF from 'jspdf'
 import autoTable from 'jspdf-autotable'
 import { formatUnit } from '@/utils/units'
 
+// Força a renderização dinâmica (SSR) para esta rota também
+export const dynamic = 'force-dynamic';
+
 const prisma = new PrismaClient()
 
 export async function GET(request: NextRequest) {
