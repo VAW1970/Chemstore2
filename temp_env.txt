@@ -1,0 +1,6 @@
+DATABASE_URL="postgresql://postgres:VAW%231970@localhost:5432/chemstore?schema=public"
+JWT_SECRET="chemstore-super-secret-jwt-key-2024-change-this-in-production"
+NEXTAUTH_SECRET="chemstore-nextauth-secret-2024-change-this-in-production"
+NEXTAUTH_URL="http://localhost:3000"
+
+

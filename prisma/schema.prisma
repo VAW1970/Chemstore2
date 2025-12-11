@@ -1,0 +1,71 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum UserRole {
+  ADMIN
+  USER
+}
+
+enum VerificationStatus {
+  PENDING
+  VERIFIED
+  REJECTED
+}
+
+enum UnitType {
+  KG
+  L
+  UNIDADES
+  G
+  ML
+  CAIXA
+  FRASCO
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  name      String
+  password  String
+  role      UserRole @default(USER)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Relations
+  reagents Reagent[]
+
+  @@map("users")
+}
+
+model Reagent {
+  id              String             @id @default(cuid())
+  name            String
+  brand           String
+  quantity        Float
+  unit            UnitType
+  expirationDate  DateTime
+  location        String
+  shelf           String
+  sector          String
+  userId          String
+  verification    VerificationStatus @default(PENDING)
+  notes           String?
+  createdAt       DateTime           @default(now())
+  updatedAt       DateTime           @updatedAt
+
+  // Relations
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("reagents")
+}
+
+
