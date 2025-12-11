@@ -1,4 +1,4 @@
-# ChemStore - Sistema de Gerenciamento de Estoque de Reagentes Químicos
+t# ChemStore - Sistema de Gerenciamento de Estoque de Reagentes Químicos
 
 ## 📋 Descrição
 
@@ -42,11 +42,11 @@ Controle completo dos reagentes químicos com os seguintes campos:
 ## 🛠️ Tecnologias Utilizadas
 
 - **Frontend**: HTML5, CSS3, JavaScript (ES6+)
-- **Backend**: Node.js com Express.js
-- **Banco de Dados**: MongoDB / PostgreSQL
+- **Backend**: Node.js com Next.js
+- **Banco de Dados**: PostgreSQL
 - **Autenticação**: JWT (JSON Web Tokens)
 - **Interface**: Bootstrap / Material Design
-- **Relatórios**: PDF.js ou similar
+- **Relatórios**: PDF.js
 
 ## 📦 Instalação
 
@@ -193,7 +193,6 @@ chemstore/
 - **Relatório de vencimentos** (próximos 30 dias)
 - **Histórico de movimentações** por reagente
 - **Relatório de uso** por usuário
-- **Etiquetas para impressão** (formato A4)
 
 ## 🐛 Solução de Problemas
 
@@ -222,12 +221,6 @@ chemstore/
 ## 📝 Licença
 
 Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
-
-## 📞 Suporte
-
-Para suporte técnico ou dúvidas:
-- Email: suporte@chemstore.com
-- Documentação: [Wiki do Projeto](https://github.com/seu-usuario/chemstore/wiki)
 
 ---
 
