@@ -2,6 +2,9 @@ import { NextRequest, NextResponse } from 'next/server'
 import { PrismaClient, UnitType, VerificationStatus } from '@prisma/client'
 import jwt from 'jsonwebtoken'
 
+// Força a renderização dinâmica (SSR) para esta rota também
+export const dynamic = 'force-dynamic';
+
 const prisma = new PrismaClient()
 
 // GET - Buscar reagente por ID
