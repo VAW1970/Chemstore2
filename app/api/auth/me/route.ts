@@ -2,6 +2,9 @@ import { NextRequest, NextResponse } from 'next/server'
 import jwt from 'jsonwebtoken'
 import { PrismaClient } from '@prisma/client'
 
+// Forçar a rota a ser dinâmica (server-side rendering em cada request)
+export const dynamic = 'force-dynamic'; 
+
 const prisma = new PrismaClient()
 
 export async function GET(request: NextRequest) {
