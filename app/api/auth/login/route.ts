@@ -3,6 +3,9 @@ import bcrypt from 'bcryptjs'
 import jwt from 'jsonwebtoken'
 import { PrismaClient } from '@prisma/client'
 
+// Força a renderização dinâmica (SSR) para esta rota também
+export const dynamic = 'force-dynamic';
+
 const prisma = new PrismaClient()
 
 export async function POST(request: NextRequest) {
