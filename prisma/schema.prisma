@@ -57,7 +57,7 @@ model Reagent {
   shelf           String
   sector          String
   userId          String
-  verification    VerificationStatus @default(PENDING)
+  verification    VerificationStatus @default(VERIFIED)
   notes           String?
   createdAt       DateTime           @default(now())
   updatedAt       DateTime           @updatedAt
