@@ -126,8 +126,8 @@ export async function GET(request: NextRequest) {
       },
       columnStyles: {
         0: { cellWidth: 35 },
-        1: { cellWidth: 25 },
-        2: { cellWidth: 20 },
+        1: { cellWidth: 20 },
+        2: { cellWidth: 25 },
         3: { cellWidth: 20 },
         4: { cellWidth: 40 },
         5: { cellWidth: 20 },
