@@ -32,7 +32,7 @@ CREATE TABLE "reagents" (
     "shelf" TEXT NOT NULL,
     "sector" TEXT NOT NULL,
     "userId" TEXT NOT NULL,
-    "verification" "VerificationStatus" NOT NULL DEFAULT 'PENDING',
+    "verification" "VerificationStatus" NOT NULL DEFAULT 'VERIFIED',
     "notes" TEXT,
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "updatedAt" TIMESTAMP(3) NOT NULL,
