@@ -93,6 +93,9 @@ STORAGES = {
     },
 }
 
+# Forçar Django a usar arquivos estáticos atualizados
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
+
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 JAZZMIN_SETTINGS = {
