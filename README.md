@@ -217,4 +217,8 @@ Para dúvidas ou problemas, abra uma issue no repositório.
 
 ---
 
+<<<<<<< HEAD
 **Chemstore** - Sistema de Gerenciamento de Reagentes Químicos © 2026
+=======
+**Chemstore** - Sistema de Gerenciamento de Reagentes Químicos © 2026
+>>>>>>> 279dd0d6c330b10d9cd4c44e240eca900cf0c080
