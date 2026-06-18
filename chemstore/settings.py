@@ -99,26 +99,35 @@ JAZZMIN_SETTINGS = {
     'site_title': 'Chemstore',
     'site_header': 'Chemstore',
     'site_brand': 'Chemstore',
-    'site_logo': 'images/logo.png',
-    'login_logo': 'images/logo.png',
-    'login_logo_dark': 'images/logo.png',
-    'site_icon': 'images/icon.png',
+    'site_logo': 'images/logo.svg',
+    'login_logo': 'images/logo.svg',
+    'login_logo_dark': 'images/logo.svg',
+    'site_icon': 'images/icon.svg',
     'welcome_sign': 'Bem-vindo ao Chemstore',
     'copyright': 'Chemstore',
     'search_model': ['reagents.Reagent'],
     'user_avatar': None,
-    'menu_title': 'Menu',
+    'menu_title': '',
     'menu_collapsible': True,
     'show_ui_builder': False,
+    'custom_css': 'css/jazzmin-custom.css',
+    'order_with_respect_to': ['auth'],
     'icons': {
         'auth.User': 'fa-solid fa-user',
-        'reagents.Reagent': 'fa-solid fa-flask',
+        'auth.Group': 'fa-solid fa-users',
     },
     'default_icon_parents': 'fa-solid fa-folder',
     'default_icon_children': 'fa-solid fa-circle',
     'related_modal_active': False,
+    'hide_apps': ['reagents'],
     'custom_links': {
-        '': [
+        'Dashboard': [
+            {
+                'name': 'Reagentes',
+                'url': 'admin:reagents_reagent_changelist',
+                'icon': 'fa-solid fa-flask',
+                'permissions': ['auth.view_user'],
+            },
             {
                 'name': 'Relatório',
                 'url': '/reagents/report/',
@@ -127,13 +136,20 @@ JAZZMIN_SETTINGS = {
             },
         ],
     },
+    'topmenu_links': [
+        {'name': 'Início', 'url': 'admin:index', 'permissions': ['auth.view_user']},
+        {'name': 'Relatório', 'url': '/reagents/report/', 'permissions': ['auth.view_user']},
+        {'name': 'Site', 'url': '/', 'permissions': ['auth.view_user']},
+    ],
 }
 
 JAZZMIN_UI_TWEAKS = {
     'theme': 'default',
-    'default_theme_mode': 'dark',
+    'default_theme_mode': 'light',
     'show_theme': False,
-    'custom_styles': None,
+    'custom_styles': [
+        'css/jazzmin-custom.css',
+    ],
     'custom_js': None,
     'use_no_ui_slider': False,
     'actions_stickytop': False,

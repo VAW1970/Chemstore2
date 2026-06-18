@@ -1,0 +1,69 @@
+{% extends "admin/base.html" %}
+{% load static %}
+
+{% block extrahead %}
+{{ block.super }}
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+/* Forçar azul no sidebar - TODOS os elementos */
+.main-sidebar,
+.main-sidebar .sidebar-wrapper,
+.main-sidebar::before,
+aside.main-sidebar,
+.main-sidebar .sidebar-brand,
+.main-sidebar .user-panel,
+#main-sidebar,
+.sidebar-menu,
+body:not(.layout-top-nav) .main-sidebar,
+body.sidebar-open .main-sidebar,
+.main-sidebar .brand-link,
+.brand-link {
+    background: #1e3a5f !important;
+    background-color: #1e3a5f !important;
+    background-image: linear-gradient(180deg, #1e3a5f 0%, #234a7a 100%) !important;
+}
+
+/* Links do menu */
+.main-sidebar .nav-sidebar .nav-item > .nav-link {
+    color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.main-sidebar .nav-sidebar .nav-item > .nav-link:hover {
+    background: rgba(255, 255, 255, 0.1) !important;
+    color: #fff !important;
+}
+
+.main-sidebar .nav-sidebar .nav-item > .nav-link.active {
+    background: linear-gradient(135deg, #4299e1, #2c5282) !important;
+    color: #fff !important;
+}
+
+/* User panel */
+.main-sidebar .user-panel {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Brand link e texto */
+.main-sidebar .brand-link,
+.main-sidebar .brand-link:hover,
+.sidebar-brand,
+.sidebar-brand:hover {
+    background: linear-gradient(180deg, #1e3a5f 0%, #234a7a 100%) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Ocultar headers de seção */
+.nav-header {
+    display: none !important;
+}
+</style>
+{% endblock %}
+
+{% block branding %}
+<h1 id="site-name">
+    <a href="{% url 'admin:index' %}">
+        <i class="fa-solid fa-flask"></i> Chemstore
+    </a>
+</h1>
+{% endblock %}
